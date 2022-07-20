@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int i = 0;
+	char passward1[20] = { 0 };
+	char passward[20] = { 0 };
+	printf("请设置密码：");
+	scanf("%s", &passward1);
+	for (i = 0; i < 3; i++)
+	{
+		printf("请输入密码：");
+		scanf("%s", &passward);
+		if (strcmp(passward1,passward ) == 0)
+		{
+			printf("登录成功\n");
+			break;
+		}
+		else
+		{
+			printf("密码错误\n");
+		}
+	}
+	if (3 == i)
+		printf("登录失败\n");
+	return 0;
+}
